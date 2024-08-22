@@ -6,7 +6,8 @@ pipeline {
         GIT_REPO_URL = 'https://github.com/Mageshpoopathi/React.git'
         APP_PORT = '3000'
     }
- 
+ stages {
+       
         stage('Build Docker Image') {
             steps {
                 script {
