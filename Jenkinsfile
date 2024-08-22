@@ -15,6 +15,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
+                    sh "pwd"
                     sh "sudo docker build -t ${env.DOCKER_IMAGE} ."
                 }
             }
