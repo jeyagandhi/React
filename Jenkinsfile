@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent linux
     environment {
         DOCKER_IMAGE = "reactapplication:latest"
         CONTAINER_NAME = "reactcontainer"
