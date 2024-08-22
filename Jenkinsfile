@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
 
-                    sh "docker build -t ${env.DOCKER_IMAGE} ."
+                    sh "sudo docker build -t ${env.DOCKER_IMAGE} ."
 
                 }
 
@@ -34,11 +34,11 @@ pipeline {
 
                     sh """
 
-                    docker stop ${env.CONTAINER_NAME} || true
+                    sudo docker stop ${env.CONTAINER_NAME} || true
 
-                    docker rm ${env.CONTAINER_NAME} || true
+                    sudo docker rm ${env.CONTAINER_NAME} || true
 
-                    docker run -d --name ${env.CONTAINER_NAME} -p ${env.APP_PORT}:${env.APP_PORT} ${env.DOCKER_IMAGE}
+                    sudo docker run -d --name ${env.CONTAINER_NAME} -p ${env.APP_PORT}:${env.APP_PORT} ${env.DOCKER_IMAGE}
 
                     """
 
