@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = "reactapplication:latest"
-        CONTAINER_NAME = "reactcontainer"
+        DOCKER_IMAGE = "reactapplication1:latest"
+        CONTAINER_NAME = "reactcontainer1"
         GIT_REPO_URL = 'https://github.com/Mageshpoopathi/React.git'
         APP_PORT = '3000'
     }
