@@ -6,7 +6,7 @@ WORKDIR /app
 
 RUN rm -rf subdirectory
 
-RUN git clone https://github.com/Mageshpoopathi/React.git subdirectory
+COPY . ./subdirectory
 
 WORKDIR /app/subdirectory
 
