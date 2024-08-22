@@ -6,13 +6,6 @@ pipeline {
         GIT_REPO_URL = 'https://github.com/Mageshpoopathi/React.git'
         APP_PORT = '3000'
     }
-
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git branch: 'main', url: "${env.GIT_REPO_URL}"
-            }
-        }
  
         stage('Build Docker Image') {
             steps {
