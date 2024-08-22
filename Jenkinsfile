@@ -7,6 +7,14 @@ pipeline {
         APP_PORT = '3000'
     }
     stages {
+        stage('checking') {
+            steps {
+                sh """
+                git --version
+                docker --version 
+                """
+            }
+        }
         stage('Clone Repository') {
             steps {
                 git branch: 'main', url: "${env.GIT_REPO_URL}"
