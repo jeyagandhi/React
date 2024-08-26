@@ -1,13 +1,11 @@
 
 import './App.css';
-import Form from './component/Form';
+import RegistrationPage from './component/RegistrationPage';
 
 function App() {
   return (
     <div className="App">
-      <h2>Login page</h2>
-      <h5>For Every User</h5>
-     <Form/>
+      <RegistrationPage/>
     </div>
   );
 }
